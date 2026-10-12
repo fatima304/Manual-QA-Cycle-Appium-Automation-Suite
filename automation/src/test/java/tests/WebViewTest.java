@@ -2,6 +2,7 @@
 package tests;
 
 import base.BaseTest;
+import utils.HomeNavigation;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -32,7 +33,7 @@ public class WebViewTest extends BaseTest {
             );
 
             // 1. Open Webview Demo screen
-            text("Webview Demo").click();
+            HomeNavigation.openMenu(driver, By.xpath("//*[@text='Webview Demo']"));
 
             // 2. Locate URL input
             WebElement urlInput = wait.until(
